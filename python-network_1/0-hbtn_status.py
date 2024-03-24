@@ -1,14 +1,8 @@
-#!/usr/bin/python3
-'''a Python script that fetches a url'''
-
+#!/usr/bin/env python3
 
 import urllib.request
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        content = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(content.decode("utf-8")))
+        print(f'Body response:\n\t- type: {type(response.read())}\n\t-'
+              f' content: {response.read()}\n\t- utf8 content: {response.read().decode("utf-8")}')
