@@ -1,8 +1,15 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
+"""
+A Python script that fetches https://alu-intranet.hbtn.io/status using urllib.
+"""
 import urllib.request
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        print(f'Body response:\n\t- type: {type(response.read())}\n\t-'
-              f' content: {response.read()}\n\t- utf8 content: {response.read().decode("utf-8")}')
+    r = requests.get("https://intranet.hbtn.io/status")
+    url = "https://alu-intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        content = response.read().decode("utf-8")
+        print("Body response:")
+        for line in content.splitlines():
+            print("\t- {}".format(line))
+
