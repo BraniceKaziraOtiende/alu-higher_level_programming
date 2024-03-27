@@ -1,22 +1,22 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 
->>> say_my_name("Maureen", "Mbuvi")
-My name is Maureen Mbuvi
+>>> say_my_name("Branice", "Kazira")
+My name is Branice Kazira
 
 Check wrong value for first name
->>> say_my_name(2004, "Mbuvi")
+>>> say_my_name(2004, "Kazira")
 Traceback (most recent call last):
         ...
 TypeError: first_name must be a string
 
->>> say_my_name(None, "Mbuvi")
+>>> say_my_name(None, "Kazira")
 Traceback (most recent call last):
         ...
 TypeError: first_name must be a string
 
 Check wrong value for last name
->>> say_my_name("Zawadi", 2004)
+>>> say_my_name("Diana B", 2004)
 Traceback (most recent call last):
         ...
 TypeError: last_name must be a string
