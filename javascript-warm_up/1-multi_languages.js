@@ -1,6 +1,8 @@
 #!/usr/bin/node
-const multilineText = `C is fun.
-Python is cool.
-And JavaScript is amazing.`;
+const cString = 'C is fun';
+const pyString = 'Python is cool';
+const jsString = 'JavaScript is amazing';
 
-console.log(multilineText)
+console.log(cString);
+console.log(pyString);
+console.log(jsString);
